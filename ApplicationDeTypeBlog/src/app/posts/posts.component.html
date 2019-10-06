@@ -1,0 +1,16 @@
+<li [ngClass]="{'list-group-item': true,'list-group-item-success': lovestatus > dislovestatus,
+        'list-group-item-danger': dislovestatus > lovestatus}">
+    
+        <div class="container">
+            <div class="row">
+                <h2 class="col"> {{postnumber}}</h2>
+                <p class="col text-right">{{datenumber | date:'short' | uppercase}}</p>
+            </div>
+        </div>
+        <P>{{paragraphe}}</P>
+        <table>
+            <td><button class="btn btn-success" (click)="increment()" >love it</button></td>
+            <td><button class="btn btn-danger" (click)="decrement()">don't love it</button></td>
+        </table>
+    
+</li>
